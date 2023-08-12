@@ -155,7 +155,8 @@ for name in array_nomes_musicas :
 
     # CLICA NO BOTAO ADICIONAR NOVA MUSICA
     click_button_add_track = driver.find_element(
-    By.ID, "btn-add-new-track").click()
+    By.ID, "btn-add-new-track")
+    driver.execute_script("arguments[0].click();", click_button_add_track)
 
 # DELETA A MUSICA 11
 click_button_delete_last_item = driver.find_element(By.XPATH, "//*[@id=\"album_track_guide\"]/div[11]/div/div[3]/i")
